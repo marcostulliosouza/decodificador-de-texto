@@ -11,39 +11,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div style="background-color:#F3F5FC; width: 100%; height:1024px;">
-        <div style="background-color:red; width: 8.33%; height: 100%;float:left">
-            <img src="img/Frame 6.png" alt="Logo Alura" id="Logo"/>
+    <header>
+        <img src="img/Vector.svg" alt="Logo Alura">
+    </header>
+    <main>
+        <div class="divMain">
+            <input type="text" id="idInput" placeholder="Digite seu texto">
         </div>
-        <div style="background-color:blue; width:63.88%; height: 100%;float:left;">
-            <h1 style="height:200px">Div 2</h1>
+        <div class="divMain" id="resultado">
+            <div id="blocoResultado">
+                <img src="img/Highqualityproducts.svg" alt="Sem texto">
+                <div class="textResultado">
+                    <h1>Nenhuma mensagem encontrada</h1>
+                    <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
+            </div>
         </div>
-        <div style="background-color:green; width:27.78%; height: 100%; float:right; margin-bottom:10px">
-            <h1 style="height:100px">Div 3</h1>
-        </div>
-        <div style="clear:both"></div>
-    </div>
-    <!-- <div class="divLeft">
-       
-        <h1 id="principalText">Digite seu texto</h1>
-    </div>
-    <div class="divCenter">
-        
-        <div class="divButton">
-
-        </div>
-    </div>
-    <div class="divRight">
-
-    </div> -->
-    <!-- <h2>Desafio - Criptografando</h2>
-    <input type="text" id="inputValue" placeholder="Digite...">
-    <div>
-        <button onclick="criptoValue()">Criptografar</button>
-        <button onclick="descriptoValue()">Descriptografar</button>
-    </div>
-    <p id="criptoValue"></p>
-
-    <script src="src\script.js"></script> -->
+    </main>
+    <footer>
+        <img src="img/exclamacaovetor.svg" alt="exclamação" id="imgAviso">
+        <p id="textAviso">Apenas letras minúsculas e sem acento.</p>
+        <button type="submit" class="btn" id="btnCriptografar">Criptografar</button>
+        <button type="submit" class="btn" id="btnDescritografar">Descriptografar</button>
+    </footer>
 </body>
 </html>
