@@ -159,3 +159,29 @@ textarea {
     padding: calc((16 / 1024) * 100vh) 0;
     word-wrap: break-word;
 }
+.result-text-content .adjusted p{
+    margin-top: calc((32 / 1024) * 100vh);
+    margin-left: calc((32 / 1440) * 100vw);
+    margin-right: calc((32 / 1440) * 100vw);
+    text-align: left;
+    width: calc((336 / 1440) * 100vw);
+    height: calc((781 / 1024) * 100vh);
+}
+#result-image{
+    width: calc((336 / 1440) * 100vw);
+    height: calc((304 / 1024) * 100vh);
+}
+#btnCopiar {
+    background-color: #D8DFE8; /* Mesma cor que o botão Descriptografar */
+    color: #0A3871; /* Mesma cor do texto do botão Descriptografar */
+    border: 1px solid #0A3871; /* Mesmo estilo de borda que o botão Descriptografar */
+    width: calc((328 / 1440) * 100vw); /* Mesmo tamanho do botão Descriptografar */
+    height: 67px; /* Mesma altura do botão Descriptografar */
+    padding: 24px; /* Mesmo preenchimento do botão Descriptografar */
+    border-radius: 24px; /* Mesmo raio de borda do botão Descriptografar */
+    font-family: 'Inter', sans-serif;
+    font-size: calc((16 / 1440) * 100vw);
+    text-align: center;
+    cursor: pointer;
+    margin: calc((32 / 1024) * 100vh) calc((32 / 1440) * 100vw);
+}
