@@ -1,3 +1,6 @@
+body{
+    background-color: #F3F5FC;
+}
 /* Define o container principal para ocupar toda a tela */
 .container {
     margin: 0;
@@ -31,10 +34,11 @@
 /* Estilos para o campo de entrada de texto */
 .input-text {
     width: calc((680 / 1440) * 100vw);
-    height: calc((48 / 1024) * 100vh);
+    height: calc((60 / 1024) * 100vh);
     font-family: 'Inter', sans-serif;
     font-size: calc((32 / 1440) * 100vw);
     color: #0A3871;
+    background-color: transparent;
     border: none; /* Remove a borda */
     outline: none; /* Remove o contorno ao clicar */
     padding: 0; /* Remove o preenchimento padrão */
@@ -43,7 +47,6 @@
 .warning{
     display: flex;
     align-content: center;
-    margin-bottom: calc((16 / 1024) * 100vh);
 }
 /* Estilos para o texto de aviso */
 .warning-text {
@@ -58,7 +61,7 @@
 
 /* Estilos para o placeholder do campo de entrada */
 .input-text::placeholder {
-    color: #0A3871; /* Cor do placeholder */
+    color: #0A3871;
 }
 
 /* Estilos para o ícone de aviso */
@@ -73,12 +76,13 @@
     height: calc((48 / 1024) * 100vh); 
 }
 .btn {
-    width: 328px;
+    margin-top: calc((16 / 1024) * 100vh);
+    width: calc((328 / 1440) * 100vw);
     height: 67px;
     padding: 24px;
     border-radius: 24px;
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    font-size: calc((16 / 1440) * 100vw);
     text-align: center;
     cursor: pointer;
 }
@@ -96,4 +100,58 @@
     background-color: #D8DFE8;
     color: #0A3871; /* Cor do texto */
     border: 1px solid #0A3871;
+}
+.result-container {
+    width: calc((400 / 1440) * 100vw);
+    height: calc((944 / 1024) * 100vh);
+    margin: calc((40 / 1024) * 100vh) 0;
+    border-radius: calc((32 / 1440) * 100vw);
+    background: #FFFFFF;
+    box-shadow: 0px calc((24 / 1024) * 100vh) calc((32 / 1024) * 100vh) calc((-8 / 1024) * 100vh) #00000014;
+    display: flex; /* Para empilhar imagem e texto um sobre o outro */
+    flex-direction: column; /* Empilhar os itens verticalmente */
+    align-items: center; /* Centralizar os itens horizontalmente */
+    justify-content: center; /* Centralizar os itens verticalmente */
+}
+#item-result{
+    width: calc((336 / 1440) * 100vw);
+    height: calc((304 / 1024) * 100vh); 
+}   
+.result-text{
+    width: calc((336 / 1440) * 100vw);
+    height: calc((122 / 1024) * 100vh);
+    position: inherit;
+}
+/* Estilos para o texto dos resultados */
+.result-text {
+    width: calc((336 / 1440) * 100vw);
+    height: calc((122 / 1024) * 100vh);
+    top: 16px; /* Afasta o texto 16px do topo */
+    left: 0; /* Coloca o texto no canto esquerdo do contêiner */
+}
+
+/* Estilos para o título dentro do result-text */
+.result-text h1 {
+    font-family: Inter;
+    font-size: calc((24 / 1440) * 100vw);
+    font-weight: 700;
+    line-height:  calc((29 / 1024) * 100vh);
+    letter-spacing: 0em;
+    text-align: center;
+    color: #343A40;
+    margin: 0; /* Remove margem padrão do h1 */
+    padding:  calc((16 / 1024) * 100vh) 0; /* Adiciona padding ao redor do h1 */
+}
+
+/* Estilos para o parágrafo dentro do result-text */
+.result-text p {
+    font-family: Inter;
+    font-size: calc((16 / 1440) * 100vw);
+    font-weight: 400;
+    line-height: calc((24 / 1024) * 100vh);
+    letter-spacing: 0em;
+    text-align: center;
+    color: #495057;
+    margin: 0; /* Remove margem padrão do parágrafo */
+    padding: calc((16 / 1024) * 100vh) 0; /* Adiciona padding ao redor do parágrafo */
 }
