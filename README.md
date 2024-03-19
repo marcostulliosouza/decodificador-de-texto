@@ -26,7 +26,7 @@ Além disso, os requisitos incluíam:
 
 ## Acesso à Aplicação
 
-A aplicação pode ser acessada através do seguinte link: [Decodificador de Texto](https://marcostulliosouza.github.io/desafio-criptografia) 🌐
+A aplicação pode ser acessada através do seguinte link: [Decodificador de Texto](https://marcostulliosouza.github.io/decodificador-de-texto/) 🌐
 
 ## Desenvolvimento
 
