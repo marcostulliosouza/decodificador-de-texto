@@ -82,7 +82,7 @@ textarea {
 
 .btn {
     margin-top: calc((16 / 1024) * 100vh);
-    width: calc((328 / 1440) * 100vw);
+    width: 328px;
     height: 67px;
     padding: 24px;
     border-radius: 24px;
