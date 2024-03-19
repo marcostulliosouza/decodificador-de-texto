@@ -13,31 +13,35 @@
 <body>
     <header>
     </header>
-    <main class="apresentacao">
-        <img src="img/Vector.svg" alt="Logo Alura">
-        <section>
-            <div class="divMain">
-                <input type="text" id="idInput" placeholder="Digite seu texto">
+    <main class="container">
+        <div class="section">
+            <!-- Logo Alura -->
+            <img src="img/Vector.svg" alt="Logo Alura" class="logo">
+        </div>
+        <div class="section">
+            <!-- Entrada de texto -->
+            <div class="input-section">
+                <input type="text" class="input-text" placeholder="Digite seu texto">
+                <div class="warning">
+                    <img src="img/exclamacaovetor.svg" alt="exclamação" class="warning-img">
+                    <p class="warning-text">Apenas letras minúsculas e sem acento.</p>
+                </div>
+                <button type="submit" class="btn" id="btnCriptografar">Criptografar</button>
+                <button type="submit" class="btn" id="btnDescritografar">Descriptografar</button>
             </div>
-            <div class="aviso">
-                <img src="img/exclamacaovetor.svg" alt="exclamação" id="imgAviso">
-                <p id="textAviso">Apenas letras minúsculas e sem acento.</p>
-            </div>
-            <button type="submit" class="btn" id="btnCriptografar">Criptografar</button>
-            <button type="submit" class="btn" id="btnDescritografar">Descriptografar</button>
-        </section>
-        <section>
-            <div class="resultado-container">
-                <div id="resultado">
+        </div>
+        <div class="section">
+            <!-- Resultado -->
+            <div class="result-container">
+                <div class="result">
                     <img src="img/Highqualityproducts.svg" alt="Sem texto">
                 </div>
-                <div class="textResultado">
+                <div class="result-text">
                     <h1>Nenhuma mensagem encontrada</h1>
                     <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
                 </div>
             </div>
-        </section>
-        
+        </div>
     </main>
     <footer>
     </footer>
