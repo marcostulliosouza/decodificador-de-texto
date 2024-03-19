@@ -81,13 +81,14 @@ textarea {
 }
 
 .btn {
-    margin-top: calc((16 / 1024) * 100vh);
-    width: calc((328 / 1440) * 100vw);
+    margin-top: 2vh; /* Ajuste a margem superior com uma unidade relativa */
+    width: 80%; /* Defina uma largura percentual para os botões */
+    max-width: 328px; /* Adicione uma largura máxima para garantir que os botões não fiquem muito grandes em telas grandes */
     height: 67px;
     padding: 24px;
     border-radius: 24px;
     font-family: 'Inter', sans-serif;
-    font-size: calc((16 / 1440) * 100vw);
+    font-size: 16px; /* Use uma unidade fixa para o tamanho da fonte para manter a legibilidade */
     text-align: center;
     cursor: pointer;
 }
@@ -184,4 +185,89 @@ textarea {
     text-align: center;
     cursor: pointer;
     margin: calc((32 / 1024) * 100vh) calc((32 / 1440) * 100vw);
+}
+/* Estilos padrão */
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Muda para um layout de coluna */
+        align-items: center; /* Centraliza o conteúdo na tela */
+        margin: calc((40 / 768) * 100vw);
+    }
+    .input-section{
+        margin: 0;
+    }
+    .section{
+        margin: 0;
+    }
+    .input-text {
+        width: 688px; /* Faça o campo de entrada ocupar toda a largura */
+        height: 48px;
+        font-family: Inter;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 48px;
+        text-align: left;
+    }
+    .warning-img{
+        width:16px; /* Ajuste a largura do aviso */
+        height: 16px;
+        margin-right: 8px;
+    }
+    .warning-text {
+        width: 228px; /* Ajuste a largura do aviso */
+        height: 18px;
+        margin-left: 0; /* Remova a margem esquerda para centralizar o aviso */
+        font-family: Inter;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: left;
+
+    }
+    .logo {
+        width: calc((31.09 / 768) * 100vw);
+        height: calc((50.58 / 1174) * 100vh);
+    }
+
+    .btn {
+        width: calc((332 / 768) * 100vw); /* Faça os botões ocuparem metade da largura da tela com margens entre eles */
+        padding: calc((24 / 768) * 100vw);
+        margin-top: 20px; /* Adicione margem acima dos botões */
+    }
+
+    #btnCriptografar {
+        margin-right: calc((10 / 768) * 100vw); /* Adicione uma margem à direita para separar os botões */
+    }
+
+    .result-container {
+        width: 688px; /* Ajuste a largura do contêiner de resultado */
+        height: 133px;
+        margin: 20px 0; /* Ajuste a margem */
+    }
+    .result-text{
+        width: 90%;
+        height: 52%;
+    }
+    .result-text h1{
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28.8px;
+        text-align: center;
+        color:#343A40;
+
+    }
+    .result-text p{
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        color: #495057;
+    }
+
+    #result-image {
+        display: none; /* Esconda a imagem resultante */
+    }
 }
