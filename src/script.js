@@ -12,6 +12,17 @@ function criptoValue() {
         const regex = new RegExp(vogal, 'g')
         inputValue = inputValue.replace(regex, dict[vogal]);
     }
+
+    if (!inputValue.trim()) { // Verifica se não há valor
+        // Exibe a imagem, o título e o texto original
+        document.getElementById("result-image").style.display = "block";
+        document.getElementById("result-text").style.display = "block";
+        document.getElementById("result-text").getElementsByTagName("h1")[0].style.display = "block";
+        document.getElementById("result-text").getElementsByTagName("p")[0].style.display = "block";
+        document.getElementById("result-text").getElementsByTagName("p")[0].innerText = "Digite um texto que você deseja criptografar ou descriptografar.";
+        return; // Retorna para encerrar a função
+    }
+
     // Oculta a imagem e o texto original
     document.getElementById("result-image").style.display = "none";
     document.getElementById("result-text").style.display = "none";
@@ -35,6 +46,17 @@ function descriptoValue() {
         const regex = new RegExp(vogal, 'g')
         inputValue = inputValue.replace(regex, dict[vogal]);
     }
+
+    if (!inputValue.trim()) { // Verifica se não há valor
+        // Exibe a imagem, o título e o texto original
+        document.getElementById("result-image").style.display = "block";
+        document.getElementById("result-text").style.display = "block";
+        document.getElementById("result-text").getElementsByTagName("h1")[0].style.display = "block";
+        document.getElementById("result-text").getElementsByTagName("p")[0].style.display = "block";
+        document.getElementById("result-text").getElementsByTagName("p")[0].innerText = "Digite um texto que você deseja criptografar ou descriptografar.";
+        return; // Retorna para encerrar a função
+    }
+
     // Oculta a imagem e o texto original
     document.getElementById("result-image").style.display = "none";
     document.getElementById("result-text").style.display = "none";
