@@ -21,22 +21,22 @@
         <div class="section">
             <!-- Entrada de texto -->
             <div class="input-section">
-                <input type="text" class="input-text" placeholder="Digite seu texto">
+                <textarea type="text" class="input-text" id="inputValue" placeholder="Digite seu texto"></textarea>
                 <div class="warning">
                     <img src="img/exclamacaovetor.svg" alt="exclamação" class="warning-img">
                     <p class="warning-text">Apenas letras minúsculas e sem acento.</p>
                 </div>
-                <button type="submit" class="btn" id="btnCriptografar">Criptografar</button>
-                <button type="submit" class="btn" id="btnDescritografar">Descriptografar</button>
+                <button type="submit" class="btn" id="btnCriptografar" onclick="criptoValue()">Criptografar</button>
+                <button type="submit" class="btn" id="btnDescritografar" onclick="descriptoValue()">Descriptografar</button>
             </div>
         </div>
         <div class="section">
             <!-- Resultado -->
             <div class="result-container">
                 <div class="result">
-                    <img src="img/Highqualityproducts.svg" alt="Sem texto" id="item-result">
+                    <img src="img/Highqualityproducts.svg" alt="Sem texto" id="result-image">
                 </div>
-                <div class="result-text">
+                <div class="result-text" id="result-text">
                     <h1>Nenhuma mensagem encontrada</h1>
                     <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
                 </div>
@@ -45,5 +45,6 @@
     </main>
     <footer>
     </footer>
+    <script src="src/script.js"></script>
 </body>
 </html>
