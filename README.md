@@ -32,6 +32,8 @@ A aplicação pode ser acessada através do seguinte link: [Decodificador de Tex
 
 Este projeto foi desenvolvido utilizando HTML, CSS e JavaScript. A lógica de criptografia e descriptografia foi implementada em JavaScript, enquanto a interface gráfica foi construída utilizando HTML e estilizada com CSS.
 
+#challengeonedecodificador6
+
 ## Autor
 
 Este projeto foi desenvolvido por Marcos Tullio Silva de Souza como parte do desafio "Decodificador de Texto" do programa Alura Challenges Oracle ONE. 🚀
