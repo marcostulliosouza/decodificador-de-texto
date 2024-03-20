@@ -1,94 +1,88 @@
 body {
     background-color: #F3F5FC;
+    margin: 0; /* Adicionado para garantir que não haja margens padrão */
+    font-family: 'Inter', sans-serif; /* Adicionado para definir uma fonte padrão */
 }
 
 .container {
-    margin: 0;
-    padding: 0;
     height: 100vh;
-    width: 100vw;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 0 calc((40 / 1440) * 100vw);
+    padding: 40px; /* Ajustado para margem uniforme */
 }
-
-.input-section {
-    margin-top: calc((168 / 1024) * 100vh);
+#text-form{
+    width: 680px;
 }
-
-.result-container {
-    margin-left: calc((40 / 1440) * 100vw);
-}
-
 .input-text {
-    width: calc((680 / 1440) * 100vw);
-    height: calc((288 / 1024) * 100vh);
-    font-family: 'Inter', sans-serif;
-    font-size: calc((32 / 1440) * 100vw);
+    width: 680px;
+    height: calc((650 / 1024) * 100vh); /* Ajustado para altura fixa */
+    max-height: 650px;
     color: #0A3871;
     background-color: transparent;
     border: none;
     outline: none;
-    padding: 0;
-    margin-bottom: calc((407 / 1024) * 100vh);
+    resize: none;
+    overflow: hidden;
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: left;
+}
+.input-text::placeholder{
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: left;
+    color: #0A3871;
 }
 
 .warning {
     display: flex;
-    align-content: center;
+    align-items: center;
 }
 
 .warning-text {
-    width: calc((228 / 1440) * 100vw);
-    height: calc((18 / 1024) * 100vh);
+    width: 228px; /* Ajustado para largura fixa */
     opacity: 0.8;
-    font-family: 'Inter', sans-serif;
-    font-size: calc((12 / 1440) * 100vw);
     color: #495057;
-    margin-left: calc((8 / 1440) * 100vw);
+    margin-left: 8px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
 }
-
-.input-text::placeholder {
-    color: #0A3871;
-}
-
-textarea {
-    resize: none;
-    border: none;
-    outline: none;
-    overflow: auto;
-    padding: 0;
-    scrollbar-base-color: #D8DFE8;
-}
-
-.warning-img {
-    width: calc((16 / 1440) * 100vw);
-    height: calc((16 / 1024) * 100vh);
+.logo-container{
+    padding: 40px; /* Adicione margem interna para espaçamento */
+    align-self: self-start;
+    margin-top: calc((20 / 1020) * 100vh);
+    margin-left: 84px;
 }
 
 .logo {
-    margin-top: calc((40 / 1440) * 100vh);
-    width: calc((31.09 / 1440) * 100vw);
-    height: calc((48 / 1024) * 100vh);
+    width: 31.09px; /* Ajustado para largura fixa */
+    height: 48px; /* Ajustado para altura fixa */
 }
-
+.btn-container {
+    display: flex; /* Torna os botões flexíveis */
+    justify-content: space-between;
+    margin-top: 8px;
+}
 .btn {
-    margin-top: 2vh; /* Ajuste a margem superior com uma unidade relativa */
-    width: 80%; /* Defina uma largura percentual para os botões */
-    max-width: 328px; /* Adicione uma largura máxima para garantir que os botões não fiquem muito grandes em telas grandes */
-    height: 67px;
+    width: 80%; /* Ajustado para largura percentual */
+    max-width: 328px; /* Ajustado para largura máxima */
     padding: 24px;
     border-radius: 24px;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px; /* Use uma unidade fixa para o tamanho da fonte para manter a legibilidade */
+    font-size: 16px; /* Ajustado para tamanho de fonte fixo */
     text-align: center;
     cursor: pointer;
 }
@@ -97,7 +91,6 @@ textarea {
     background-color: #0A3871;
     color: #FFFFFF;
     border: none;
-    margin-right: 24px;
 }
 
 #btnDescritografar {
@@ -107,167 +100,139 @@ textarea {
 }
 
 .result-container {
-    width: calc((400 / 1440) * 100vw);
+    width: 400px;
     height: calc((944 / 1024) * 100vh);
-    margin: calc((40 / 1024) * 100vh) 0;
-    border-radius: calc((32 / 1440) * 100vw);
+    max-height: 944px;
+    border-radius: 24px; /* Ajustado para raio de borda uniforme */
     background: #FFFFFF;
-    box-shadow: 0px calc((24 / 1024) * 100vh) calc((32 / 1024) * 100vh) calc((-8 / 1024) * 100vh) #00000014;
+    box-shadow: 0px 24px 32px -8px #00000014; /* Ajustado para valores uniformes */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
-#item-result {
-    width: calc((336 / 1440) * 100vw);
-    height: calc((304 / 1024) * 100vh);
+.result-text-content.adjusted {
+    height: calc((781 / 1024) * 100vh); /* Definindo a altura como 84% da altura do contêiner pai */
+    max-height: 781px;
+    overflow-y: auto; /* Adicionando uma barra de rolagem vertical quando o conteúdo ultrapassar a altura */
+    text-align: left;
 }
-
-.result-text {
-    width: calc((336 / 1440) * 100vw);
-    height: calc((122 / 1024) * 100vh);
+.result{
+    width: 336px;
 }
-
-.result-text {
-    width: calc((336 / 1440) * 100vw);
+#result-image {
+    width: 100%; /* Ajustado para largura percentual */
+    max-width: 336px; /* Ajustado para largura máxima */
+    margin-bottom: 16px;
     height: auto;
-    top: calc((16 / 1024) * 100vh);
-    left: 0;
+}
+
+.result-text {
+    width: 336px;
+    text-align: center;
+    margin-top: 16px; /* Ajustado para margem uniforme */
 }
 
 .result-text h1 {
-    font-family: Inter;
-    font-size: calc((24 / 1440) * 100vw);
+    font-size: 24px; /* Ajustado para tamanho de fonte fixo */
     font-weight: 700;
-    line-height: calc((29 / 1024) * 100vh);
-    letter-spacing: 0em;
-    text-align: center;
+    line-height: 1.2;
     color: #343A40;
     margin: 0;
-    padding: calc((16 / 1024) * 100vh) 0;
+    padding: 8px 0; /* Ajustado para preenchimento uniforme */
 }
 
 .result-text p {
-    font-family: Inter;
-    font-size: calc((16 / 1440) * 100vw);
+    font-size: 16px; /* Ajustado para tamanho de fonte fixo */
     font-weight: 400;
-    line-height: calc((24 / 1024) * 100vh);
-    letter-spacing: 0em;
-    text-align: center;
+    line-height: 1.5;
     color: #495057;
     margin: 0;
-    padding: calc((16 / 1024) * 100vh) 0;
+    padding: 8px 0; /* Ajustado para preenchimento uniforme */
     word-wrap: break-word;
+    max-width: 100%;
+    overflow: auto;
+    max-height: calc(100vh - 200px); 
 }
-.result-text-content .adjusted p{
-    margin-top: calc((32 / 1024) * 100vh);
-    margin-left: calc((32 / 1440) * 100vw);
-    margin-right: calc((32 / 1440) * 100vw);
-    text-align: left;
-    width: calc((336 / 1440) * 100vw);
-    height: calc((781 / 1024) * 100vh);
+#btnCopiar{
+    margin-bottom: 32px;
+    margin-left: 32px;
+    margin-right: 32px;
 }
-#result-image{
-    width: calc((336 / 1440) * 100vw);
-    height: calc((304 / 1024) * 100vh);
+footer {
+    background-color: #0A3871; /* Cor de fundo */
+    color: #D8DFE8; /* Cor do texto */
+    text-align: center; /* Centralizar o texto */
+    padding: 20px 0; /* Espaçamento interno superior e inferior */
 }
-#btnCopiar {
-    background-color: #D8DFE8; /* Mesma cor que o botão Descriptografar */
-    color: #0A3871; /* Mesma cor do texto do botão Descriptografar */
-    border: 1px solid #0A3871; /* Mesmo estilo de borda que o botão Descriptografar */
-    width: calc((328 / 1440) * 100vw); /* Mesmo tamanho do botão Descriptografar */
-    height: 67px; /* Mesma altura do botão Descriptografar */
-    padding: 24px; /* Mesmo preenchimento do botão Descriptografar */
-    border-radius: 24px; /* Mesmo raio de borda do botão Descriptografar */
-    font-family: 'Inter', sans-serif;
-    font-size: calc((16 / 1440) * 100vw);
-    text-align: center;
-    cursor: pointer;
-    margin: calc((32 / 1024) * 100vh) calc((32 / 1440) * 100vw);
+
+.footer-content {
+    font-size: 14px; /* Tamanho da fonte */
 }
-/* Estilos padrão */
+
+.footer-content a {
+    position: relative;
+    color: #D8DFE8;
+    text-decoration: none;
+}
+
+.footer-content a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #D8DFE8;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.footer-content a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
 
 @media screen and (max-width: 768px) {
     .container {
-        flex-direction: column; /* Muda para um layout de coluna */
-        align-items: center; /* Centraliza o conteúdo na tela */
-        margin: calc((40 / 768) * 100vw);
+        flex-direction: column;
+        align-items: center;
     }
-    .input-section{
-        margin: 0;
-    }
-    .section{
-        margin: 0;
-    }
-    .input-text {
-        width: 688px; /* Faça o campo de entrada ocupar toda a largura */
-        height: 48px;
-        font-family: Inter;
-        font-size: 32px;
-        font-weight: 400;
-        line-height: 48px;
-        text-align: left;
-    }
-    .warning-img{
-        width:16px; /* Ajuste a largura do aviso */
-        height: 16px;
-        margin-right: 8px;
-    }
-    .warning-text {
-        width: 228px; /* Ajuste a largura do aviso */
-        height: 18px;
-        margin-left: 0; /* Remova a margem esquerda para centralizar o aviso */
-        font-family: Inter;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 18px;
-        text-align: left;
 
+    .input-text {
+        width: 90%; /* Ajustado para largura percentual */
+        max-width: none; /* Removido para largura máxima não ser aplicada em telas menores */
+        height: 48px; /* Ajustado para altura fixa */
+        font-size: 16px; /* Ajustado para tamanho de fonte fixo */
+        line-height: 1.5; /* Ajustado para espaçamento uniforme entre linhas */
     }
-    .logo {
-        width: calc((31.09 / 768) * 100vw);
-        height: calc((50.58 / 1174) * 100vh);
+
+    .warning-img {
+        width: 16px; /* Ajustado para largura fixa */
+        height: 16px; /* Ajustado para altura fixa */
+    }
+
+    .warning-text {
+        width: auto; /* Ajustado para largura automática */
+        font-size: 12px; /* Ajustado para tamanho de fonte fixo */
+        line-height: 1.5; /* Ajustado para espaçamento uniforme entre linhas */
     }
 
     .btn {
-        width: calc((332 / 768) * 100vw); /* Faça os botões ocuparem metade da largura da tela com margens entre eles */
-        padding: calc((24 / 768) * 100vw);
-        margin-top: 20px; /* Adicione margem acima dos botões */
+        width: 90%; /* Ajustado para largura percentual */
+        max-width: none; /* Removido para largura máxima não ser aplicada em telas menores */
+        margin-top: 20px; /* Ajustado para margem uniforme */
     }
 
-    #btnCriptografar {
-        margin-right: calc((10 / 768) * 100vw); /* Adicione uma margem à direita para separar os botões */
+    .logo {
+        margin-top: 20px; /* Ajustado para margem uniforme */
     }
 
     .result-container {
-        width: 688px; /* Ajuste a largura do contêiner de resultado */
-        height: 133px;
-        margin: 20px 0; /* Ajuste a margem */
-    }
-    .result-text{
-        width: 90%;
-        height: 52%;
-    }
-    .result-text h1{
-        font-family: Inter;
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 28.8px;
-        text-align: center;
-        color:#343A40;
-
-    }
-    .result-text p{
-        font-family: Inter;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        text-align: center;
-        color: #495057;
-    }
-
-    #result-image {
-        display: none; /* Esconda a imagem resultante */
+        width: 90%; /* Ajustado para largura percentual */
+        max-width: none; /* Removido para largura máxima não ser aplicada em telas menores */
+        height: auto;
+        margin: 20px 0; /* Ajustado para margem uniforme */
     }
 }

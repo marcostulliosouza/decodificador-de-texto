@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decodificador de Texto -  Alura Challenges Oracle ONE</title>
+    <title>Decodificador de Texto - Alura Challenges Oracle ONE</title>
     <link rel="stylesheet" href="src/reset.css">
     <link rel="stylesheet" href="src/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,39 +12,49 @@
 </head>
 <body>
     <header>
+        
     </header>
-    <main class="container">
-        <div class="section">
-            <!-- Logo Alura -->
-            <img src="img/Vector.svg" alt="Logo Alura" class="logo">
-        </div>
-        <div class="section">
-            <!-- Entrada de texto -->
-            <div class="input-section">
-                <textarea type="text" class="input-text" id="inputValue" placeholder="Digite seu texto"></textarea>
-                <div class="warning">
-                    <img src="img/exclamacaovetor.svg" alt="exclamação" class="warning-img">
-                    <p class="warning-text">Apenas letras minúsculas e sem acento.</p>
-                </div>
-                <button type="submit" class="btn" id="btnCriptografar" onclick="criptoValue()">Criptografar</button>
-                <button type="submit" class="btn" id="btnDescritografar" onclick="descriptoValue()">Descriptografar</button>
+    <main>
+        <section class="container">
+            <div class="logo-container">
+                <!-- Logo Alura -->
+                <img src="img/Vector.svg" alt="Logo Alura" class="logo">
             </div>
-        </div>
-        <div class="section">
-            <!-- Resultado -->
-            <div class="result-container">
-                <div class="result">
-                    <img src="img/Highqualityproducts.svg" alt="Sem texto" id="result-image">
-                </div>
-                <div class="result-text" id="result-text">
-                    <h1>Nenhuma mensagem encontrada</h1>
-                    <p class="result-text-content">Digite um texto que você deseja criptografar ou descriptografar.</p>
-                </div> 
-                <button id="btnCopiar" class="btn" onclick="copiarTexto()" style="display: none;">Copiar</button>               
+            <div class="section">
+                <!-- Entrada de texto -->
+                <form id="text-form">
+                    <div class="input-section">
+                        <textarea class="input-text" id="inputValue" placeholder="Digite seu texto"></textarea>
+                        <div class="warning">
+                            <img src="img/exclamacaovetor.svg" alt="exclamação" class="warning-img">
+                            <p class="warning-text">Apenas letras minúsculas e sem acento.</p>
+                        </div>
+                        <div class="btn-container">
+                            <button type="button" class="btn" id="btnCriptografar" onclick="criptoValue()">Criptografar</button>
+                            <button type="button" class="btn" id="btnDescritografar" onclick="descriptoValue()">Descriptografar</button>
+                        </div>                        
+                    </div>
+                </form>
             </div>
-        </div>
+            <div class="section">
+                <!-- Resultado -->
+                <div class="result-container">
+                    <div class="result">
+                        <img src="img/Highqualityproducts.svg" alt="Sem texto" id="result-image">
+                    </div>
+                    <div class="result-text" id="result-text">
+                        <h1>Nenhuma mensagem encontrada</h1>
+                        <p class="result-text-content">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                    </div> 
+                    <button id="btnCopiar" class="btn btn-container" onclick="copiarTexto()" style="display: none;">Copiar</button>               
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
+        <div class="footer-content">
+            Desenvolvido por <a href="https://www.linkedin.com/in/marcostullio/">Marcos Tullio</a> 🧑🏾‍💻
+        </div>
     </footer>
     <script src="src/script.js"></script>
 </body>
